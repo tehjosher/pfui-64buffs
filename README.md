@@ -8,3 +8,7 @@ With the official PFui-Turtle WoW basically not functional with current patch, t
 This file is located in "\twmoa_1171\Interface\AddOns\pfUI\api"
 
 If you wish to try it, save a back-up of your current "unitframes" file and put this one in.
+
+**DebuffFilter.lua**
+
+Also included is an experimental update to DebuffFilter.lua to accomodate Turtle WoW buff/debuff limits.
