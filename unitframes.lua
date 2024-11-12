@@ -795,7 +795,7 @@ function pfUI.uf:UpdateConfig()
   end
 
   if f.config.debuffs == "off" then
-    for i=1, 32 do
+    for i=1, 64 do
       if f.debuffs and f.debuffs[i] then
         f.debuffs[i]:Hide()
         f.debuffs[i] = nil
@@ -805,7 +805,7 @@ function pfUI.uf:UpdateConfig()
   else
     f.debuffs = f.debuffs or {}
 
-    for i=1, 32 do
+    for i=1, 64 do
       if i > tonumber(f.config.debufflimit) then break end
 
       f.debuffs[i] = f.debuffs[i] or CreateFrame("Button", "pfUI" .. f.fname .. "Debuff" .. i, f)
@@ -1792,7 +1792,7 @@ function pfUI.uf:RefreshUnit(unit, component)
         end
       end
 
-      for i=1,32 do -- scan for custom debuffs
+      for i=1,64 do -- scan for custom debuffs
         local texture, count = UnitDebuff(unitstr, i)
         if texture then
           local timeleft, name, _
